@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(rootSkeleton)
 
 # Version numbering
-set (magma_VERSION_MAJOR 1)
-set (magma_VERSION_MAJOR 0)
+set (basicApp_VERSION_MAJOR 1)
+set (basicApp_VERSION_MAJOR 0)
 set (CMAKE_CXX_FLAGS "-O2")
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Directories
 add_subdirectory(app)
