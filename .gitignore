@@ -1,0 +1,67 @@
+# Repo-specific ignores #
+#########################
+
+# ROOT files #
+##############
+*.root
+
+# Directories #
+###############
+bin/
+build/
+
+# Global ignores #
+##################
+
+# Compiled source #
+###################
+*.a
+*.app
+*.com
+*.class
+*.dll
+*.dylib
+*.exe
+*.la
+*.lib
+*.lo
+*.o
+*.out
+*.so
+*.d
+
+# Pre-compiled headers #
+########################
+*.gch
+*.pch
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Documentation and data #
+##########################
+*.pdf
+*.doc
+*.docx
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+.vscode/
