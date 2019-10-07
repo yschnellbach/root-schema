@@ -6,6 +6,7 @@ project(rootSkeleton)
 set (magma_VERSION_MAJOR 1)
 set (magma_VERSION_MAJOR 0)
 set (CMAKE_CXX_FLAGS "-O2")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Directories
 add_subdirectory(app)
@@ -32,5 +33,5 @@ add_library(basicLib SHARED ${LIBRARY_SOURCES})
 target_link_libraries(basicLib ${ROOT_LIBRARIES})
 
 # Create  a main program using the library
-add_executable(basicApp prg/basicApp.cxx)
+add_executable(basicApp app/basicApp.cxx)
 target_link_libraries(basicApp basicLib)
