@@ -8,12 +8,9 @@ set (basicApp_VERSION_MAJOR 0)
 set (CMAKE_CXX_FLAGS "-O2")
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Option to force colours (if you're using ninja etc)
-# Set it to FALSE if your output gets mangled
-option (FORCE_COLORED_OUTPUT "Always produce ANSI-colored output (GNU/Clang only)." TRUE)
-
-# Select colour option based on compiler ID
-if (${FORCE_COLORED_OUTPUT})
+# Checks $CLICOLOR_FORCE variable to force compiler to emit coloured output
+# The parameter is based on compiler ID as it's not standardised
+if ($ENV{CLICOLOR_FORCE})
     if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
        add_compile_options (-fdiagnostics-color=always)
     elseif ("${CMAKE_CXX_COMPILER_ID}" MATCHES "^(Clang|AppleClang)$")
