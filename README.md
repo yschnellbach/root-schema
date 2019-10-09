@@ -1,4 +1,4 @@
-# root-skeleton
+# root-schema
 Super-basic structure for compiling some code using ROOT libraries
 
 ## Usage
