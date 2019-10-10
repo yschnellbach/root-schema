@@ -10,3 +10,8 @@ When using this, there are a few things and default assumptions to consider and 
 - It assumes you're using `.cxx` as file extension, it can be changed in line 31 and 36
 - It assumes you want to compile every source file in the `/src` directory, if not, delete line 31 and replace `${LIBRARY_SOURCES}` in the line below with the explicit files (that's a safer approach but less convenient)
 - Optimisation flag is set to `-O2` in line 8, so consider the usual caveats that come with optimisation flags and tune to your liking
+
+## Credits
+This is mostly cobbled together from code snippets floating around the internet, modified to suit my needs. Key resources were:
+- [ROOT Documentation](https://root.cern.ch/how/integrate-root-my-project-cmake)
+- [Colored C++ Compiler Output with Ninja](https://medium.com/@alasher/colored-c-compiler-output-with-ninja-clang-gcc-10bfe7f2b949)
