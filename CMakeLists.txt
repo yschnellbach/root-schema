@@ -8,6 +8,12 @@ set (basicApp_VERSION_MAJOR 0)
 set (CMAKE_CXX_FLAGS "-O2")
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Enforce out-of-source builds 
+string(COMPARE EQUAL "${CMAKE_SOURCE_DIR}" "${CMAKE_BINARY_DIR}" _insource)
+if(_insource)
+   message(FATAL_ERROR "Error: In-source build detected! Please create a build directory!")
+endif(_insource) 
+
 # Checks $CLICOLOR_FORCE variable to force compiler to emit coloured output
 # The parameter is based on compiler ID as it's not standardised
 if ($ENV{CLICOLOR_FORCE})
